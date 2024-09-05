@@ -1,0 +1,23 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    grid-gap: 10px;
+}
+
+.dialog{
+
+}
+.dialogItems{
+
+}
+
+.dialogItems .active{
+    color: khaki;
+    text-decoration: none;
+}
+
+.messages{
+
+}
+
+.message{}
