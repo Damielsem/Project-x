@@ -1,18 +1,27 @@
 import React from 'react';
+import s  from './MyPorts.module.css'
 import Post from "./Post/Post";
+const MyPosts = (props) => {
 
-const MyPosts = () => {
+
+
+    let postElements = props.posts.map (p => <Post id={p.id} message={p.message} LikesCount={p.LikesCount} />);
+
     return (
+        <div>
+            <h3>My post</h3>
             <div>
-                My post
-                <div>
+                <div className={s.PostBlock}>
                     <textarea></textarea>
+                </div>
+
+                <div className={s.ButtonBlock}>
                     <button>add</button>
                 </div>
-                <Post message='Wow, Mclaren' LikesCount='34'/>
-                <Post message='beauteful MCL34' LikesCount='67'/>
-                <Post message='MClaren best' LikesCount='78'/>
+
             </div>
+            {postElements}
+        </div>
     );
 };
 

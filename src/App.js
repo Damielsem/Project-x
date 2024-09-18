@@ -10,6 +10,9 @@ import News from "./Components/News/News";
 import Settings from "./Components/Settings/Settings";
 
 
+
+
+
 const App = (props) => {
     return (
         <BrowserRouter>
@@ -21,8 +24,8 @@ const App = (props) => {
                         <Route path='/news' element={<News />} />
                         <Route path='/music' element={<Music />} />
                         <Route path='/settings' element={<Settings />} />
-                        <Route path='/profile' element={<Profile />}/>
-                        <Route path='/dialog/*' element={<Dialogs />} />
+                        <Route path='/profile' element={<Profile profile={props.profile} posts={props.posts}/>}/>
+                        <Route path='/dialog/*' element={<Dialogs Dialogs={Dialogs} message={props.message} dialog={props.dialog}/>} />
 
                     </Routes>
                 </div>

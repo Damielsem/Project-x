@@ -1,16 +1,15 @@
 import React from 'react';
-import MyPosts from "./MyPosts/MyPosts";
+import  s from './ProfileInfo.module.css';
 
-const Profile = (props) => {
+const ProfileInfo = (props) => {
     return (
         <div>
             <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8o8mNuhv11hvAPurlCLoNOycZ_CP4a6WEPw&s'/>
-            <div>
+            <div className={s.Ava}>
                 ava
             </div >
-            <MyPosts />
-        </div>
-    )
+            </div>
+    );
 }
 
-export default Profile;
+export default ProfileInfo;
