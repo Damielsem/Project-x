@@ -13,9 +13,10 @@ import Settings from "./Components/Settings/Settings";
 
 
 
+
 const App = (props) => {
     return (
-
+        <div className="back">
             <div className="app-wrapper">
                 <Header />
                 <Navbar />
@@ -24,13 +25,16 @@ const App = (props) => {
                         <Route path='/news' element={<News />} />
                         <Route path='/music' element={<Music />} />
                         <Route path='/settings' element={<Settings />} />
-                        <Route path='/profile' element={<Profile profile={props.profile} state={props.state.profilePage}/>}/>
+                        <Route path='/profile' element={<Profile profile={props.profile}
+                                                                 profilePage={props.state.profilePage}
+                                                                 addPost={props.addPost}
+                                                                 updateNewPostText={props.updateNewPostText}/>}/>
                         <Route path='/dialog/*' element={<Dialogs Dialogs={Dialogs} state={props.state.dialogPage} />} />
 
                     </Routes>
                 </div>
             </div>
-
+</div>
     );
 }
 export default App;

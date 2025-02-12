@@ -1,7 +1,7 @@
-.ButtonBlock{
-    margin:5px;
+.PostBlock{
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
 }
 
-.PostBlock{
-    margin-left: 5px;
-}
